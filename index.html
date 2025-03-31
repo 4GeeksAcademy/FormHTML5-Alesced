@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1%;
+            border: transparent;
+        }
+        label {
+            margin-bottom: 0.5%;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            padding: 0.5%;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            height: 40px;
+            border-radius: 10px;
+        }
+        .mb-3 {
+            display: flex;
+            gap: 1rem; 
+        }
+        #Cardnumber {
+            flex: 2; 
+        }
+        #CVCnumber {
+            flex: 1; 
+        }
+        #exampleInputAmount {
+            flex: 1.5; 
+        }
+       .row {
+        display: flex;
+        gap: 1rem; 
+        flex-grow: 1;
+        }
+        .row > fieldset {
+            flex: 1;
+        }
+        #exampleInputFirstName {
+            flex: 2; 
+        }
+        #exampleInputCity {
+            flex: 1.5; 
+        }
+        #exampleInputLastName {
+            flex: 1; 
+        }
+        #examplePostalCode {
+            flex: 1; 
+        }
+        .form-check-inline {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            background-color: grey;
+        }
+        button {
+            margin: 1%;
+            padding: 0.5% 1%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="margin: 0%; padding: 0%; height: 100%; width: 100%;">
+    <form style="width: 100%; border: 1px solid grey; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space space-between;">
+        <div class="header" style= "border-bottom: 1px solid grey; background-color: rgba(128, 128, 128, 0.183);">
+            <h1 style="margin-left: 2%;">Payment for Exanple</h1>
+        </div>
+        <div style="margin: 1%; border: 1px, solid, red; background-color: rgba(255, 0, 0, 0.357); border-radius: 10px;">
+            <h3 style="margin-left: 2%;">Some Fields are missing</h3>
+        </div>
+        <div class="content">
+            <div class="mb-3" style="display: flex;">
+                <!-- Primera Fila -->
+                <fieldset id="Cardnumber">
+                    <div>
+                        <label for="exampleInputCard" class="form-label">Card#</label>
+                        <input type="number" class="form-control" id="exampleInputCard" aria-describedby="Card#">
+                    </div>
+                </fieldset>    
+                <fieldset id="CVCnumber">
+                    <div id="CVCnumber" class="form-text">
+                        <label for="exampleInputCard" class="form-label">CVC#</label>
+                        <input type="number" class="form-control" id="exampleInputCVC" aria-describedby="CVC#">
+                    </div>
+                </fieldset>
+                <fieldset id="exampleInputAmount">
+                    <div>
+                        <label for="exampleInputCard" class="form-label">Amount$</label>
+                        <input type="number" class="form-control" id="exampleInputAmount" aria-describedby="Amount$">
+                    </div>
+                </fieldset>
+            </div>
+            <!-- Segunda Fila -->
+             <!-- Primera Columna -->
+            <div class="row" style="display: flex; gap: 1rem; align-items: stretch;">
+                <div style="display: flex; flex: 0.7; flex-direction: column; gap: 1rem;">
+                    <fieldset style="flex: 1;">
+                        <div>
+                            <label for="exampleInputFirstName" class="form-label">FirstName</label>
+                            <input type="text" class="form-control" id="exampleInputFirstName">
+                        </div>
+                    </fieldset>
+                    <fieldset style="flex: 1;">
+                        <div>
+                            <label for="exampleInputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="exampleInputCity">
+                        </div>
+                    </fieldset>
+                    <fieldset style="display: inline-flex; flex-direction: row;">
+                        We accept:
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+                            <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-amex"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+                            <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-diners-club"></i></label>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- Segunda columna -->
+                <div style="display: flex; flex: 0.5; flex-direction: column; gap: 1rem;">
+                    <fieldset style="flex: 1;">
+                        <div>
+                            <label for="exampleInputLastName" class="form-label">LastName</label>
+                            <input type="text" class="form-control" id="exampleInputLastName">
+                        </div>
+                    </fieldset>
+                    <fieldset style="flex: 1; margin-inline-start: -2%;">
+                        <div style=" display: flex;">
+                            <div style="flex: 1;">
+                                <fieldset>
+                                    States
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Pick a states</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div>
+                                <fieldset style="flex: 1; margin-inline-end: -3%;">
+                                    <div>
+                                        <label for="exampleInputPostalCode" class="form-label">Postal Code</label>
+                                        <input type="text" class="form-control" id="examplePostalCode">
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        Message
+                        <textarea style="height: 70%;"></textarea>
+                        <div id="emailHelp" class="form-text">Add any notes here.</div>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- Tercera Fila -->
+            <div style="display: flex; border-top: 1px solid grey; width: 100%; align-items: center; background-color: rgba(128, 128, 128, 0.183);">
+                <button type="button" class="btn btn-primary btn-sm" style="background-color: grey; margin-left: 85%;">Cancel</button>
+                <button type="button" class="btn btn-secondary btn-sm" style="background-color: rgba(0, 81, 255, 0.463); margin-left: 0%">Send</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
